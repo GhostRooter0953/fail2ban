@@ -1,0 +1,9 @@
+---
+- name: reload fail2ban unit
+  systemd:
+    daemon_reload: yes
+
+- name: fail2ban restart
+  service:
+    name: fail2ban
+    state: restarted

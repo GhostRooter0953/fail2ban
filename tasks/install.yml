@@ -1,0 +1,13 @@
+---
+- name: install fail2ban
+  apt:
+    name: 
+    - apt-transport-https
+    - ca-certificates
+    - software-properties-common
+    - fail2ban
+    update_cache: true
+
+- name: gather installed packages
+  package_facts:
+    manager: apt
